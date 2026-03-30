@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Uno Sunderland</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .cart-summary {
+            background: white; 
+            margin: auto;
+            margin-left: 0%;
+            padding: 40px; 
+            border-radius: 8px; 
+            border: 1px solid #ddd; 
+            width: 350px;
+        }
+        .category-title {
+            border-bottom: 2px solid #e74c3c;
+            margin: 20px 0;
+            padding-bottom: 5px;
+        }
+        @media (max-width: 900px) {
+            .offers {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .offers {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="Logo.png" alt="Pizza Uno Logo">
+        </div>
+        <h1>PIZZA UNO SUNDERLAND</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="order.html">Order Online</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+        <section class="brand-intro">
+            <div class="intro-container">
+                <div class="intro-image">
+                    <img src="Uno.jpg">
+                </div>
+                <div class="intro-text">
+                    <p>Step into a world of authentic flavors where every bite is a celebration of craftsmanship and community. At <span class="highlight">Pizza Uno</span>, we pride ourselves on tradition, using only the freshest ingredients and our signature wood-fired oven to create pizza that truly makes a statement. Experience the vibrant ambiance of our restaurant, where passion for food meets a warm, welcoming environment. A table for two, a memory for a lifetime. <span class="highlight">Discover our special offers:</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    <main id="order">
+        <section class="menu-grid">
+            <div class="offers">
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <img src="Deal1.jpeg" alt="Family Feast">
+                    </div>
+                    <h3>Family Feast</h3>
+                    <p>2 Large Pizzas, Garlic Bread, 1.5L Coke</p>
+                    <button class="order-btn">£29.99 - Order</button>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <img src="Deal2.jpeg" alt="Meal Deal">
+                    </div>
+                    <h3>Meal Deal</h3>
+                    <p>1 Large Pizza, Large Fries, Can Coke</p>
+                    <button class="order-btn">£19.99 - Order</button>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <img src="Deal3.jpg" alt="Collection Only">
+                    </div>
+                    <h3>Any Large Pizza</h3>
+                    <p>1 Large Pizza</p>
+                    <button class="order-btn">£9.99 - Order</button>
+                </div>
+            </div>
+                <aside class="cart-summary">
+                    <h3>Your Basket</h3>
+                    <p id="basket-status">Your basket is empty</p>
+            
+                    <div class="cart-totals">
+                    <p>Subtotal: <strong class="subtotal-val">£0.00</strong></p>
+                    <p>Delivery: £2.50</p>
+                    <hr>
+                    <p>Total: <strong class="total-val">£0.00</strong></p>
+                <button class="checkout-btn" disabled>Checkout</button>
+                </aside>
+        </section>
+    </main>
+    <footer>
+    <p>&copy; 2026 Pizza Uno Sunderland | <a href="policy.html">Terms & Cookie Policy</a></p>
+    </footer>
+    <script src="script.js"></script>
+    <div id="cookie-banner" class="cookie-container">
+        <p>We use cookies to enhance your experience and remember your basket. By clicking "Accept", you agree to our <a href="policy.html">Terms & Cookies</a>.</p>
+        <button id="accept-cookies" class="order-btn">Accept</button>
+    </div>
+</body>
+</html>

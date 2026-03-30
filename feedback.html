@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Pizza Uno Sunderland</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logo.png" alt="Pizza Uno Logo">
+        </div>
+        <h1>PIZZA UNO SUNDERLAND</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#order">Order Online</a>
+            <a href="feedback.html" class="active">Feedback</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main class="contact-container">
+        <section class="contact-info">
+            <h2>We Value Your Opinion</h2>
+            <p>At Pizza Uno, we strive to serve the best pizza in Sunderland. Whether you loved your meal or think we can improve, we want to hear from you!</p>
+            <hr>
+            <h3>Recent Reviews</h3>
+            <blockquote>"Best pepperoni pizza in town! Fast delivery too." - <em>Sarah J.</em></blockquote>
+            <blockquote>"The Meal Deal is amazing value for money." - <em>Mark T.</em></blockquote>
+        </section>
+        <section class="contact-form">
+            <h2>Leave a Review</h2>
+            <p th:if="${success}" 
+               style="color: green; font-weight: bold;" 
+               th:text="${success}"></p>
+            <form action="/feedback/submit" method="post">
+                <input type="text" name="customerName" placeholder="Your Name" required>
+                <input type="email" name="customerEmail" placeholder="Your Email" required> 
+                <label for="rating" style="display:block; margin-bottom: 5px;">Rating:</label>
+                <select name="rating" id="rating" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;">
+                    <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                    <option value="4">⭐⭐⭐⭐ - Very Good</option>
+                    <option value="3">⭐⭐⭐ - Average</option>
+                    <option value="2">⭐⭐ - Poor</option>
+                    <option value="1">⭐ - Terrible</option>
+                </select>
+                <textarea name="comments" placeholder="Tell us about your experience..." rows="5" required style="width: auto; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>    
+                <button type="submit" class="order-btn">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+    <p>&copy; 2026 Pizza Uno Sunderland | <a href="policy.html">Terms & Cookie Policy</a></p>
+    </footer>
+</body>
+</html>

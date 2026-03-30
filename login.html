@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register - Pizza Uno Sunderland</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .auth-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .auth-box h2 {
+            border-bottom: 2px solid #e74c3c;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            color: #333;
+        }
+        .auth-box form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .auth-box label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        @media (max-width: 900px) {
+            .auth-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="Logo.png" alt="Pizza Uno Logo">
+        </div>
+        <h1>PIZZA UNO SUNDERLAND</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#order">Order Online</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <section class="auth-box">
+                <h2>Login</h2>
+                <p>Welcome back! Please enter your details.</p>
+                <form action="/login" method="post">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" name="email" placeholder="Your Email" required>
+                    
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" placeholder="••••••••" required>
+                    
+                    <button type="submit" class="order-btn" style="width: 100%;">Sign In</button>
+                </form>
+                <p style="margin-top: 15px; font-size: 0.9em;"><a href="#">Forgot password?</a></p>
+            </section>
+
+            <section class="auth-box">
+                <h2>Register</h2>
+                <p>New to Pizza Uno? Create an account for faster checkout.</p>
+                <form action="/register" method="post">
+                    <label for="reg-name">Full Name</label>
+                    <input type="text" id="reg-name" name="fullname" placeholder="Your Name" required>
+
+                    <label for="reg-email">Email Address</label>
+                    <input type="email" id="reg-email" name="email" placeholder="Your Email" required>
+                    
+                    <label for="reg-password">Create Password</label>
+                    <input type="password" id="reg-password" name="password" placeholder="At least 8 characters" required>
+                    
+                    <label for="reg-confirm">Confirm Password</label>
+                    <input type="password" id="reg-confirm" name="confirm_password" placeholder="••••••••" required>
+                    
+                    <button type="submit" class="order-btn" style="width: 100%; background-color: #27ae60;">Create Account</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+    <p>&copy; 2026 Pizza Uno Sunderland | <a href="policy.html">Terms & Cookie Policy</a></p>
+    </footer>
+
+</body>
+</html>
