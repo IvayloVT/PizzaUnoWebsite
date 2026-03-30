@@ -3,6 +3,7 @@ body {
     margin: 0; 
     background: white; 
     text-align: center; 
+    body {font-size: 16px;}
 }
 header {
     display: flex;
@@ -88,6 +89,8 @@ main {
 img {
     overflow-clip-margin: content-box;
     overflow: clip;
+    max-width: 100%;
+    height: auto;
 }
 .offer-card { 
     background: white; 
