@@ -1,18 +1,18 @@
-/* --- Global Resets & Typography --- */
+/* --- Global Resets --- */
 * {
-    box-sizing: border-box; /* Ensures padding doesn't break layout width */
+    box-sizing: border-box; /* Prevents padding from breaking layouts */
 }
 
 body { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     margin: 0; 
-    background-color: #f8f9fa; 
+    background: #f8f9fa; 
     text-align: center; 
-    color: #333;
+    font-size: 16px;
     line-height: 1.6;
 }
 
-/* --- Header & Navigation --- */
+/* --- Responsive Header & Nav --- */
 header {
     display: flex;
     flex-direction: column; /* Stack logo, title, and nav on mobile */
@@ -23,8 +23,8 @@ header {
 }
 
 header h1 { 
-    margin: 10px 0;
     font-size: 1.5rem;
+    margin: 10px 0;
 }
 
 .logo img {
@@ -34,38 +34,35 @@ header h1 {
 
 nav {
     display: flex;
-    flex-wrap: wrap; /* Allows menu items to wrap on tiny screens */
+    flex-wrap: wrap; /* Wraps links if they don't fit in one line */
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 nav a { 
     color: white; 
     text-decoration: none; 
     font-weight: bold;
-    padding: 5px 10px;
-    transition: color 0.3s;
+    padding: 5px;
 }
 
-nav a:hover, nav a.active {
-    color: #29fc6b;
-}
+nav a:hover, nav a.active { color: #29fc6b; }
 
-/* --- Main Layout Containers --- */
+/* --- Layout Containers --- */
 main { 
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Responsive Grid for Order & Auth pages */
+/* Grid for Menu (Order page) and Auth (Login page) */
 .menu-grid, .auth-container {
     display: grid;
-    grid-template-columns: 1fr; /* Single column for mobile */
-    gap: 30px;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 20px;
 }
 
-/* Single column layout for Contact/Feedback but centered */
+/* Contact and Feedback sections */
 .contact-container {
     display: flex;
     flex-direction: column;
@@ -74,25 +71,22 @@ main {
     margin: 0 auto;
 }
 
-/* --- Reusable Components (Cards & Boxes) --- */
-.offer-card, .auth-box, .contact-info, .contact-form, .checkout-container, .policy-content, .cart-summary { 
+/* --- Reusable Components (Cards/Forms) --- */
+.offer-card, .auth-box, .contact-info, .contact-form, .checkout-container, .policy-content, .cart-summary {
     background: white; 
     padding: 20px; 
-    border-radius: 12px; 
+    border-radius: 8px; 
     border: 1px solid #ddd; 
+    width: 100%; /* Ensure full width within their container */
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    width: 100%;
 }
 
-.highlight {
-    font-weight: 700;  
-    color: #ef5743; 
-}
+.highlight { font-weight: 700; color: #ef5743; }
 
-/* --- Menu & Offer Items --- */
+/* --- Menu Item Grid --- */
 .offers { 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Auto-responsive columns */
     gap: 20px;
     width: 100%;
 }
@@ -101,8 +95,7 @@ main {
     width: 100%;
     height: 200px;
     overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    border-radius: 5px;
 }
 
 .offer-image img {
@@ -111,37 +104,24 @@ main {
     object-fit: cover;
 }
 
-/* --- Buttons --- */
+/* --- Buttons & Forms --- */
 button, .order-btn, .checkout-btn, .place-order { 
     background: #e74c3c; 
     color: white; 
     border: none; 
     padding: 12px 20px; 
-    border-radius: 6px; 
+    border-radius: 4px; 
     cursor: pointer; 
-    font-size: 1rem;
     font-weight: bold;
-    width: 100%; /* Full width buttons are easier to tap on mobile */
-    transition: background 0.3s;
+    width: 100%; /* Easier to tap on mobile */
 }
 
-button:hover, .order-btn:hover {
-    background: #c0392b;
-}
-
-button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-}
-
-/* --- Form Elements --- */
 input, textarea, select {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
+    border-radius: 5px;
 }
 
 /* --- Footer --- */
@@ -149,63 +129,40 @@ footer {
     background: #101010;
     color: white;
     padding: 30px 20px;
-    margin-top: 50px;
 }
 
-footer a {
-    color: #aaa;
-    text-decoration: none;
-}
+footer a { color: white; margin-left: 10px; }
 
-footer a:hover {
-    color: white;
-}
-
-/* --- Cookie Banner --- */
-.cookie-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0,0.9);
-    color: white;
-    padding: 15px;
-    display: flex;
-    flex-direction: column; /* Stacked on mobile */
-    align-items: center;
-    gap: 10px;
-    z-index: 1000;
-}
-
-/* --- DESKTOP REFINEMENTS (768px and up) --- */
+/* --- Desktop Specific Styles (Screens wider than 768px) --- */
 @media (min-width: 768px) {
     header {
-        flex-direction: row; /* Side-by-side header */
+        flex-direction: row; /* Horizontal logo and nav on desktop */
         justify-content: space-between;
     }
 
-    header h1 { font-size: 2rem; }
-
     .menu-grid {
-        grid-template-columns: 3fr 1fr; /* Basket moves to the side */
+        grid-template-columns: 3fr 1fr; /* Basket on the right side */
     }
 
     .auth-container {
         grid-template-columns: 1fr 1fr; /* Login/Register side-by-side */
     }
 
-    .cookie-container {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 15px 10%;
-    }
-
-    .cookie-container .order-btn {
-        width: auto;
-    }
-
     .cart-summary {
-        position: sticky;
+        position: sticky; /* Keeps basket visible while scrolling */
         top: 20px;
+        height: fit-content;
     }
+
+    button, .order-btn { width: auto; min-width: 150px; }
+}
+
+/* Cookie Banner Mobile Fix */
+.cookie-container {
+    flex-direction: column;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .cookie-container { flex-direction: row; }
 }
