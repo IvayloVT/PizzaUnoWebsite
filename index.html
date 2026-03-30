@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .menu-grid {
-            display: grid;
+            display: flex;
             grid-template-columns: 3fr 1fr;
             gap: 20px;
             padding: 20px;
@@ -28,14 +28,14 @@
         }
         body { font-size: 16px;}
         @media (min-width: 768px) {
-            .menu {display: grid;}
+            .menu {display: flex;}
             .hero-text {font-size: 40px;}
             .offers {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
         @media (min-width: 788px) {
-            .menu {display: grid;}
+            .menu {display: flex;}
             .hero-text {font-size: 40px;}
             .offers {
                 grid-template-columns: 1fr;
