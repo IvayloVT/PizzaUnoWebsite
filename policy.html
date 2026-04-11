@@ -5,44 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms & Cookies - Pizza Uno Sunderland</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .policy-content {
-            max-width: 800px;
-            margin: 40px auto;
-            text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            line-height: 1.8;
-        }
-        h2 { color: #ef5743; border-bottom: 2px solid #ef5743; padding-bottom: 10px; }
-    </style>
 </head>
 <body>
     <header>
-        <div class="logo"><img src="Logo.png" alt="Logo"></div>
-        <h1>PIZZA UNO SUNDERLAND</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="order.html" class="active">Order Online</a>
-            <a href="feedback.html">Feedback</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="login.html">Login</a>
-        </nav>
+        <div class="header-inner">
+            <div class="logo">
+                <img src="Logo.png" alt="Pizza Uno logo">
+            </div>
+            <div class="site-title">
+                <h1>PIZZA UNO SUNDERLAND</h1>
+                <p>Read our website terms and cookie information.</p>
+            </div>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+            <nav id="site-nav">
+                <a href="index.html">Home</a>
+                <a href="order.html">Order Online</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="policy-content">
-            <h2>Terms & Conditions</h2>
-            <p>By engaging with the Pizza Uno Sunderland website, you agree to our comprehensive Terms and Conditions, which are designed to ensure a seamless experience for every crust-lover in the community. All users must provide accurate personal and payment information when using our "Order Online" or registration features to facilitate timely delivery and secure transactions. While we strive for perfection in every wood-fired bake, we reserve the right to modify prices, available offers - such as the Family Feast or Meal Deal - and delivery fees (currently set at £2.50) without prior notice. Your use of this platform constitutes acceptance of these terms, including our commitment to protecting your data and maintaining the vibrant, welcoming standard our Sunderland patrons expect.</p>
-            
-            <h2>Cookie Policy</h2>
-            <p>Pizza Uno Sunderland uses cookies to enhance your digital experience and ensure our online ordering system functions smoothly. These small data files are stored on your device to help us remember your "Your Basket" selections as you browse and to streamline the checkout process for returning customers. By clicking "Accept" on our consent banner, you agree to our use of cookies for these essential features, as well as for analyzing site traffic to improve our service. You can manage your preferences or learn more about how we protect your information by visiting our dedicated "Terms & Cookies" page in the footer.</p>
+        <section class="hero policy-hero">
+            <div class="hero-card">
+                <span class="eyebrow">Website Policies</span>
+                <h2>Clear, simple terms for browsing and ordering online.</h2>
+                <p>This page explains how Pizza Uno Sunderland handles website use, online orders and cookies. We've kept it easy to read so customers can quickly understand what to expect before placing an order.</p>
+            </div>
+            <div class="policy-side-card">
+                <h3>Quick Summary</h3>
+                <ul class="policy-list">
+                    <li>Use accurate details when placing orders.</li>
+                    <li>Prices and offers can change without notice.</li>
+                    <li>Cookies help remember basket activity and site preferences.</li>
+                    <li>You can contact us if you need help with an order or request.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="policy-grid">
+            <article class="policy-content">
+                <h2>Terms &amp; Conditions</h2>
+                <p>By using the Pizza Uno Sunderland website, you agree to use it for lawful browsing, account access and food ordering. When submitting an order, you should provide accurate contact, address and payment details so we can prepare your food correctly and deliver it to the right place.</p>
+                <p>We aim to keep all menu items, prices and promotions up to date, but availability may change during busy periods. We may update delivery charges, meal deals or site content when needed, and continued use of the website means you accept those updates.</p>
+            </article>
+
+            <article class="policy-content">
+                <h2>Ordering &amp; Payments</h2>
+                <p>Orders are only confirmed once they have been received and accepted by Pizza Uno Sunderland. Delivery times are estimates and may vary depending on demand, weather or local traffic.</p>
+                <p>If there is an issue with stock, pricing or delivery coverage, we may contact you to offer an alternative or cancel the order. Please review your basket carefully before checkout.</p>
+            </article>
+
+            <article class="policy-content">
+                <h2>Cookie Policy</h2>
+                <p>We use cookies to improve your browsing experience and help the website function smoothly. This includes remembering your basket, supporting checkout and understanding how visitors use the site so we can keep improving it.</p>
+                <p>By selecting "Accept" on the cookie banner, you allow us to store cookies used for essential website features and convenience. You can clear cookies from your browser at any time if you prefer not to keep them saved.</p>
+            </article>
+
+            <article class="policy-content">
+                <h2>Privacy &amp; Contact</h2>
+                <p>Any information you submit through forms or checkout should only be used to manage your order, respond to enquiries and improve customer service. We do not ask for more information than we need to support your visit.</p>
+                <p>If you have questions about these terms or need support with an order, please use our <a href="contact.html" class="policy-link">contact page</a> or call the shop directly.</p>
+            </article>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Pizza Uno Sunderland | <a href="policy.html" style="color: white;">Terms & Cookies</a></p>
+        <p>&copy; 2026 Pizza Uno Sunderland | <a href="policy.html">Terms &amp; Cookie Policy</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
