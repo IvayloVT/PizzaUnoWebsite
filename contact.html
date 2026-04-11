@@ -1,58 +1,76 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Pizza Uno Sunderland</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="Logo.png">
-        </div>
-        <h1>PIZZA UNO SUNDERLAND</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="#order">Order Online</a>
-            <a href="#feedback">Feedback</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="login.html">Login</a>
-        </nav>
-    </header>
-    </nav>
-            <div class="outro-image">
-                <img src="Uno1.jpg" alt="A vibrant view of the rustic Pizza Uno restaurant interior, featuring a wood-fired oven.">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="Logo.png" alt="Pizza Uno logo">
             </div>
-    <main class="contact-container">
-        <section class="contact-info">
-            <p><strong>Address:</strong> 51 St. Lukes Terrace, Sunderland, SR4 6NF</p>
-            <p><strong>Phone:</strong> 0191 510 0176</p>
-            <hr>
-            <h3>Opening Hours</h3>
-            <p>Monday: 15:45 PM - 01:00 AM</p>
-            <p>Tuesday: 15:45 PM - 01:00 AM</p>
-            <p>Wednesday: 15:45 PM - 01:00 AM</p>
-            <p>Thursday: 15:45 PM - 01:00 AM</p>
-            <p>Friday: 15:45 PM - 01:00 AM</p>
-            <p>Saturday: 15:45 PM - 01:00 AM</p>
-            <p>Sunday: 15:45 PM - 01:00 AM</p>
+            <div class="site-title">
+                <h1>PIZZA UNO SUNDERLAND</h1>
+                <p>Get in touch, ask a question or plan your next order.</p>
+            </div>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+            <nav id="site-nav">
+                <a href="index.html">Home</a>
+                <a href="order.html">Order Online</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="contact.html" class="active">Contact Us</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="margin-bottom: 24px;">
+            <div class="hero-card">
+                <span class="eyebrow">Contact Pizza Uno</span>
+                <h2>We'd love to hear from you.</h2>
+                <p>If you have a question about your order, opening hours or collection, send us a message and we will get back to you as soon as we can.</p>
+            </div>
+            <div class="outro-image">
+                <img src="Uno1.jpg" alt="Pizza Uno restaurant interior">
+            </div>
         </section>
-        <section class=""contact-form>
-            <h2>Send Us a Message</h2>
-            <p th:if="${success}"
-            style="color: green;
-            font-weight: bold;"
-            th:text="${success}"></p>
-            <form> <action="/contact/send" 
-            method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="message" placeholder="How can we help?" required></textarea>
-                <button type="submit" class="order-btn">Send Message</button>
-            </form>
+
+        <section class="contact-container">
+            <section class="contact-info">
+                <h2>Visit or call</h2>
+                <p><strong>Address:</strong> 51 St. Lukes Terrace, Sunderland, SR4 6NF</p>
+                <p><strong>Phone:</strong> 0191 510 0176</p>
+                <hr>
+                <h3>Opening Hours</h3>
+                <p>Monday to Sunday: 3:45 PM - 1:00 AM</p>
+            </section>
+
+            <section class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="#" method="post">
+                    <label for="contact-name">Your Name</label>
+                    <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+
+                    <label for="contact-email">Your Email</label>
+                    <input type="email" id="contact-email" name="email" placeholder="you@example.com" required>
+
+                    <label for="contact-message">How can we help?</label>
+                    <textarea id="contact-message" name="message" placeholder="Tell us what you need help with" required></textarea>
+
+                    <button type="submit" class="order-btn">Send Message</button>
+                </form>
+            </section>
         </section>
-    </main> 
+    </main>
+
     <footer>
-    <p>&copy; 2026 Pizza Uno Sunderland | <a href="policy.html">Terms & Cookie Policy</a></p>
+        <p>&copy; 2026 Pizza Uno Sunderland | <a href="policy.html">Terms &amp; Cookie Policy</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-    
