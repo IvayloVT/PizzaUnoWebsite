@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Login & Register - Pizza Uno Sunderland</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="login-page">
     <header>
         <div class="header-inner">
             <div class="logo">
@@ -14,24 +14,40 @@
             </div>
             <div class="site-title">
                 <h1>PIZZA UNO SUNDERLAND</h1>
-                <p>Sign in faster or create an account for easier checkout.</p>
+                <p>Sign in or create an account for a faster, cleaner checkout flow.</p>
             </div>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
             <nav id="site-nav">
                 <a href="index.html">Home</a>
                 <a href="order.html">Order Online</a>
                 <a href="feedback.html">Feedback</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.html">Contact</a>
                 <a href="login.html" class="active">Login</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="auth-container">
-            <section class="auth-box">
+        <section class="page-hero">
+            <div class="hero-card">
+                <span class="eyebrow">Your account</span>
+                <h2 class="page-title">Simple sign-in for quicker orders next time.</h2>
+                <p class="page-copy">The account area is split into two cleaner panels so login and registration feel easier to understand on first glance.</p>
+            </div>
+            <div class="summary-card">
+                <h3 class="summary-title">Account Benefits</h3>
+                <ul class="summary-list">
+                    <li>Faster checkout on repeat visits.</li>
+                    <li>Saved details for easier ordering.</li>
+                    <li>A cleaner route from basket to confirmation.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="auth-layout feedback-layout-gap">
+            <article class="auth-box">
                 <h2>Login</h2>
-                <p>Welcome back. Sign in to track your details and speed up checkout.</p>
+                <p>Welcome back. Sign in to move through checkout faster.</p>
                 <form action="#" method="post">
                     <label for="login-email">Email Address</label>
                     <input type="email" id="login-email" name="email" placeholder="you@example.com" required>
@@ -39,14 +55,14 @@
                     <label for="login-password">Password</label>
                     <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
 
-                    <button type="submit" class="order-btn">Sign In</button>
+                    <button type="submit">Sign In</button>
                 </form>
                 <p><a href="#">Forgot your password?</a></p>
-            </section>
+            </article>
 
-            <section class="auth-box">
-                <h2>Register</h2>
-                <p>Create an account to save time on future orders.</p>
+            <article class="auth-box">
+                <h2>Create Account</h2>
+                <p>New here? Register to make future takeaway nights even easier.</p>
                 <form action="#" method="post">
                     <label for="reg-name">Full Name</label>
                     <input type="text" id="reg-name" name="fullname" placeholder="Your full name" required>
@@ -60,9 +76,9 @@
                     <label for="reg-confirm">Confirm Password</label>
                     <input type="password" id="reg-confirm" name="confirm_password" placeholder="Repeat your password" required>
 
-                    <button type="submit" class="order-btn">Create Account</button>
+                    <button type="submit">Create Account</button>
                 </form>
-            </section>
+            </article>
         </section>
     </main>
 
@@ -73,3 +89,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

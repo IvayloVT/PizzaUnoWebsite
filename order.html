@@ -6,7 +6,7 @@
     <title>Order Online - Pizza Uno Sunderland</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="order-page">
     <header>
         <div class="header-inner">
             <div class="logo">
@@ -14,160 +14,109 @@
             </div>
             <div class="site-title">
                 <h1>PIZZA UNO SUNDERLAND</h1>
-                <p>Build your order with fresh sides, burgers and pizzas.</p>
+                <p>Choose from pizzas, sides, wraps, wings and quick meal deals.</p>
             </div>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
             <nav id="site-nav">
                 <a href="index.html">Home</a>
                 <a href="order.html" class="active">Order Online</a>
                 <a href="feedback.html">Feedback</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.html">Contact</a>
                 <a href="login.html">Login</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="section-heading">
-            <h2>Order Online</h2>
-            <p>Choose from your favourites and keep an eye on the basket as you go.</p>
+        <section class="page-hero">
+            <div class="hero-card">
+                <span class="eyebrow">Order online</span>
+                <h2 class="page-title">Build your order without the clutter.</h2>
+                <p class="page-copy">The menu is grouped into simpler sections so it feels easier to browse on both desktop and mobile. Add items as you go and keep an eye on the basket beside you.</p>
+                <div class="page-actions">
+                    <a class="secondary-link" href="contact.html">Need help with an order?</a>
+                </div>
+                <div class="menu-jump-links">
+                    <a class="secondary-link" href="#chips">Chips &amp; Garlic Bread</a>
+                    <a class="secondary-link" href="#wings">Strips &amp; Wings</a>
+                    <a class="secondary-link" href="#burgers">Burgers &amp; Wraps</a>
+                    <a class="secondary-link" href="#pizzas">Popular Pizzas</a>
+                </div>
+            </div>
+            <div class="summary-card">
+                <h3 class="summary-title">Menu Overview</h3>
+                <ul class="summary-list">
+                    <li>Garlic bread and chips for quick sides.</li>
+                    <li>Chicken strips and wings for sharing.</li>
+                    <li>Burgers and wraps for meal-style orders.</li>
+                    <li>Popular pizzas collected in one section.</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="menu-grid">
+        <section class="menu-grid order-shell">
             <section class="menu-items">
+                <section class="menu-section" id="chips">
                 <h2 class="category-title">Chips &amp; Garlic Bread</h2>
-                <div class="offers">
-                    <article class="offer-card">
-                        <div class="offer-image"><img src="garlic.jpg" alt="Garlic bread"></div>
-                        <div class="offer-content">
-                            <h3>Garlic Bread</h3>
-                            <p>Fresh garlic bread finished with herbs.</p>
-                            <button class="order-btn" type="button">Add £3.99</button>
-                        </div>
-                    </article>
-                    <article class="offer-card">
-                        <div class="offer-image"><img src="garlic.jpg" alt="Garlic bread with cheese"></div>
-                        <div class="offer-content">
-                            <h3>Garlic Bread with Cheese</h3>
-                            <p>Our garlic bread topped with bubbling melted cheese.</p>
-                            <button class="order-btn" type="button">Add £4.99</button>
-                        </div>
-                    </article>
-                    <article class="offer-card">
-                        <div class="offer-image"><img src="chips.jpg" alt="Small chips"></div>
-                        <div class="offer-content">
-                            <h3>Small Chips</h3>
-                            <p>A golden side portion, perfect for one.</p>
-                            <button class="order-btn" type="button">Add £2.99</button>
-                        </div>
-                    </article>
-                    <article class="offer-card">
-                        <div class="offer-image"><img src="chips.jpg" alt="Large chips"></div>
-                        <div class="offer-content">
-                            <h3>Large Chips</h3>
-                            <p>A bigger portion made for sharing.</p>
-                            <button class="order-btn" type="button">Add £4.99</button>
-                        </div>
-                    </article>
+                <div class="offers menu-offers">
+                    <article class="offer-card"><div class="offer-image"><img src="garlic.jpg" alt="Garlic bread"></div><div class="offer-content"><h3>Garlic Bread</h3><p>Fresh garlic bread finished with herbs.</p><div class="offer-meta"><span class="offer-price">£3.99</span><button class="order-btn" type="button" data-name="Garlic Bread" data-price="3.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="garlic.jpg" alt="Garlic bread with cheese"></div><div class="offer-content"><h3>Garlic Bread with Cheese</h3><p>Our garlic bread topped with bubbling melted cheese.</p><div class="offer-meta"><span class="offer-price">£4.99</span><button class="order-btn" type="button" data-name="Garlic Bread with Cheese" data-price="4.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="chips.jpg" alt="Small chips"></div><div class="offer-content"><h3>Small Chips</h3><p>A golden side portion, perfect for one.</p><div class="offer-meta"><span class="offer-price">£2.99</span><button class="order-btn" type="button" data-name="Small Chips" data-price="2.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="chips.jpg" alt="Large chips"></div><div class="offer-content"><h3>Large Chips</h3><p>A bigger portion made for sharing.</p><div class="offer-meta"><span class="offer-price">£4.99</span><button class="order-btn" type="button" data-name="Large Chips" data-price="4.99">Add to Basket</button></div></div></article>
                 </div>
+                </section>
 
+                <section class="menu-section" id="wings">
                 <h2 class="category-title">Strips &amp; Wings</h2>
-                <div class="offers">
-                    <article class="offer-card">
-                        <div class="offer-image"><img src="strips.jpg" alt="Chicken strips"></div>
-                        <div class="offer-content">
-                            <h3>Chicken Strips</h3>
-                            <p>6 chicken strips with your choice of sauces.</p>
-                            <button class="order-btn" type="button">Add £7.99</button>
-                        </div>
-                    </article>
-                    <article class="offer-card">
-                        <div class="offer-image"><img src="stripsch.jpg" alt="Chicken strips and chips"></div>
-                        <div class="offer-content">
-                            <h3>Chicken Strips &amp; Chips</h3>
-                            <p>6 chicken strips served with chips and sauces.</p>
-                            <button class="order-btn" type="button">Add £9.99</button>
-                        </div>
-                    </article>
-                    <article class="offer-card">
-                        <div class="offer-image"><img src="wings.jpg" alt="Chicken wings"></div>
-                        <div class="offer-content">
-                            <h3>Chicken Wings</h3>
-                            <p>12 seasoned chicken wings finished with herbs.</p>
-                            <button class="order-btn" type="button">Add £7.99</button>
-                        </div>
-                    </article>
-                    <article class="offer-card">
-                        <div class="offer-image"><img src="wingsch.jpg" alt="Chicken wings with chips"></div>
-                        <div class="offer-content">
-                            <h3>Chicken Wings with Chips</h3>
-                            <p>12 chicken wings paired with a generous side of chips.</p>
-                            <button class="order-btn" type="button">Add £9.99</button>
-                        </div>
-                    </article>
+                <div class="offers menu-offers">
+                    <article class="offer-card"><div class="offer-image"><img src="strips.jpg" alt="Chicken strips"></div><div class="offer-content"><h3>Chicken Strips</h3><p>6 chicken strips with your choice of sauces.</p><div class="offer-meta"><span class="offer-price">£7.99</span><button class="order-btn" type="button" data-name="Chicken Strips" data-price="7.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="stripsch.jpg" alt="Chicken strips and chips"></div><div class="offer-content"><h3>Chicken Strips &amp; Chips</h3><p>6 chicken strips served with chips and sauces.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="Chicken Strips and Chips" data-price="9.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="wings.jpg" alt="Chicken wings"></div><div class="offer-content"><h3>Chicken Wings</h3><p>12 seasoned chicken wings finished with herbs.</p><div class="offer-meta"><span class="offer-price">£7.99</span><button class="order-btn" type="button" data-name="Chicken Wings" data-price="7.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="wingsch.jpg" alt="Chicken wings with chips"></div><div class="offer-content"><h3>Chicken Wings with Chips</h3><p>12 chicken wings paired with a generous side of chips.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="Chicken Wings with Chips" data-price="9.99">Add to Basket</button></div></div></article>
                 </div>
+                </section>
 
+                <section class="menu-section" id="burgers">
                 <h2 class="category-title">Burgers &amp; Wraps</h2>
-                <div class="offers">
-                    <article class="offer-card">
-                        <div class="offer-image"><img src="burg.jpg" alt="Cheeseburger"></div>
-                        <div class="offer-content">
-                            <h3>Cheeseburger</h3>
-                            <p>A classic cheeseburger with lettuce and tomato.</p>
-                            <button class="order-btn" type="button">Add £6.99</button>
-                        </div>
-                    </article>
-                    <article class="offer-card">
-                        <div class="offer-image"><img src="burgch.jpg" alt="Cheeseburger and chips"></div>
-                        <div class="offer-content">
-                            <h3>Cheeseburger &amp; Chips</h3>
-                            <p>A burger meal with chips for a bigger appetite.</p>
-                            <button class="order-btn" type="button">Add £8.99</button>
-                        </div>
-                    </article>
-                    <article class="offer-card">
-                        <div class="offer-image"><img src="wrap.jpg" alt="Chicken wrap"></div>
-                        <div class="offer-content">
-                            <h3>Chicken Wrap</h3>
-                            <p>Chicken wrap packed with fresh greens.</p>
-                            <button class="order-btn" type="button">Add £6.99</button>
-                        </div>
-                    </article>
-                    <article class="offer-card">
-                        <div class="offer-image"><img src="wrapch.jpg" alt="Chicken wrap with chips"></div>
-                        <div class="offer-content">
-                            <h3>Chicken Wrap &amp; Chips</h3>
-                            <p>Our chicken wrap served with a side of chips.</p>
-                            <button class="order-btn" type="button">Add £8.99</button>
-                        </div>
-                    </article>
+                <div class="offers menu-offers">
+                    <article class="offer-card"><div class="offer-image"><img src="burg.jpg" alt="Cheeseburger"></div><div class="offer-content"><h3>Cheeseburger</h3><p>A classic cheeseburger with lettuce and tomato.</p><div class="offer-meta"><span class="offer-price">£6.99</span><button class="order-btn" type="button" data-name="Cheeseburger" data-price="6.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="burgch.jpg" alt="Cheeseburger and chips"></div><div class="offer-content"><h3>Cheeseburger &amp; Chips</h3><p>A burger meal with chips for a bigger appetite.</p><div class="offer-meta"><span class="offer-price">£8.99</span><button class="order-btn" type="button" data-name="Cheeseburger and Chips" data-price="8.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="wrap.jpg" alt="Chicken wrap"></div><div class="offer-content"><h3>Chicken Wrap</h3><p>Chicken wrap packed with fresh greens.</p><div class="offer-meta"><span class="offer-price">£6.99</span><button class="order-btn" type="button" data-name="Chicken Wrap" data-price="6.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="wrapch.jpg" alt="Chicken wrap with chips"></div><div class="offer-content"><h3>Chicken Wrap &amp; Chips</h3><p>Our chicken wrap served with a side of chips.</p><div class="offer-meta"><span class="offer-price">£8.99</span><button class="order-btn" type="button" data-name="Chicken Wrap and Chips" data-price="8.99">Add to Basket</button></div></div></article>
                 </div>
+                </section>
 
+                <section class="menu-section" id="pizzas">
                 <h2 class="category-title">Popular Pizzas</h2>
-                <div class="offers">
-                    <article class="offer-card"><div class="offer-image"><img src="1.jpg" alt="Pepperoni Classic pizza"></div><div class="offer-content"><h3>Pepperoni Classic</h3><p>A generous layer of pepperoni over melted cheese.</p><button class="order-btn" type="button">Add £9.99</button></div></article>
-                    <article class="offer-card"><div class="offer-image"><img src="2.jpg" alt="Pepperoni and fresh basil pizza"></div><div class="offer-content"><h3>Pepperoni &amp; Fresh Basil</h3><p>Pepperoni topped with fresh basil for an Italian-style finish.</p><button class="order-btn" type="button">Add £9.99</button></div></article>
-                    <article class="offer-card"><div class="offer-image"><img src="3.jpg" alt="Pepperoni deluxe pizza"></div><div class="offer-content"><h3>Pepperoni Deluxe</h3><p>Extra cheese with crisped pepperoni curled at the edges.</p><button class="order-btn" type="button">Add £9.99</button></div></article>
-                    <article class="offer-card"><div class="offer-image"><img src="4.jpg" alt="Pepperoni and sausage combo pizza"></div><div class="offer-content"><h3>Pepperoni &amp; Sausage Combo</h3><p>Pepperoni slices and crumbled sausage over a cheese base.</p><button class="order-btn" type="button">Add £9.99</button></div></article>
-                    <article class="offer-card"><div class="offer-image"><img src="5.jpg" alt="Veggie supreme pizza"></div><div class="offer-content"><h3>Veggie Supreme</h3><p>Green peppers, black olives and mushrooms on cheese.</p><button class="order-btn" type="button">Add £9.99</button></div></article>
-                    <article class="offer-card"><div class="offer-image"><img src="6.jpg" alt="Cheese pizza"></div><div class="offer-content"><h3>Cheese Pizza</h3><p>A simple golden cheese pizza with no extra toppings.</p><button class="order-btn" type="button">Add £9.99</button></div></article>
-                    <article class="offer-card"><div class="offer-image"><img src="7.jpg" alt="Hawaiian pizza"></div><div class="offer-content"><h3>Hawaiian</h3><p>Pineapple and pepperoni for a sweet and savoury mix.</p><button class="order-btn" type="button">Add £9.99</button></div></article>
-                    <article class="offer-card"><div class="offer-image"><img src="8.jpg" alt="Pepperoni pizza with garlic swirls"></div><div class="offer-content"><h3>Pepperoni with Garlic Swirls</h3><p>Pepperoni finished with bold swirls of garlic sauce.</p><button class="order-btn" type="button">Add £9.99</button></div></article>
-                    <article class="offer-card"><div class="offer-image"><img src="9.jpg" alt="White pizza with garlic ricotta"></div><div class="offer-content"><h3>White Pizza (Garlic Ricotta)</h3><p>A sauceless white pizza with creamy garlic ricotta.</p><button class="order-btn" type="button">Add £9.99</button></div></article>
-                    <article class="offer-card"><div class="offer-image"><img src="10.jpg" alt="Pepperoni and basil pizza"></div><div class="offer-content"><h3>Pepperoni &amp; Basil</h3><p>Pepperoni pizza finished with fresh basil leaves.</p><button class="order-btn" type="button">Add £9.99</button></div></article>
-                    <article class="offer-card"><div class="offer-image"><img src="11.jpg" alt="Pepperoni and pineapple deluxe pizza"></div><div class="offer-content"><h3>Pepperoni &amp; Pineapple Deluxe</h3><p>Pepperoni, pineapple chunks and extra cheese.</p><button class="order-btn" type="button">Add £9.99</button></div></article>
-                    <article class="offer-card"><div class="offer-image"><img src="12.jpg" alt="Spinach and mushroom pizza"></div><div class="offer-content"><h3>Spinach &amp; Mushroom</h3><p>Spinach leaves and mushrooms on a rich vegetable pizza.</p><button class="order-btn" type="button">Add £9.99</button></div></article>
+                <div class="offers menu-offers">
+                    <article class="offer-card"><div class="offer-image"><img src="1.jpg" alt="Pepperoni Classic pizza"></div><div class="offer-content"><h3>Pepperoni Classic</h3><p>A generous layer of pepperoni over melted cheese.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="Pepperoni Classic" data-price="9.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="2.jpg" alt="Pepperoni and fresh basil pizza"></div><div class="offer-content"><h3>Pepperoni &amp; Fresh Basil</h3><p>Pepperoni topped with fresh basil for an Italian-style finish.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="Pepperoni and Fresh Basil" data-price="9.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="3.jpg" alt="Pepperoni deluxe pizza"></div><div class="offer-content"><h3>Pepperoni Deluxe</h3><p>Extra cheese with crisped pepperoni curled at the edges.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="Pepperoni Deluxe" data-price="9.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="4.jpg" alt="Pepperoni and sausage combo pizza"></div><div class="offer-content"><h3>Pepperoni &amp; Sausage Combo</h3><p>Pepperoni slices and crumbled sausage over a cheese base.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="Pepperoni and Sausage Combo" data-price="9.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="5.jpg" alt="Veggie Supreme pizza"></div><div class="offer-content"><h3>Veggie Supreme</h3><p>Green peppers, black olives and mushrooms on cheese.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="Veggie Supreme" data-price="9.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="6.jpg" alt="Cheese Pizza"></div><div class="offer-content"><h3>Cheese Pizza</h3><p>A simple golden cheese pizza with no extra toppings.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="Cheese Pizza" data-price="9.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="7.jpg" alt="Hawaiian pizza"></div><div class="offer-content"><h3>Hawaiian</h3><p>Pineapple and pepperoni for a sweet and savoury mix.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="Hawaiian" data-price="9.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="8.jpg" alt="Pepperoni with Garlic Swirls"></div><div class="offer-content"><h3>Pepperoni with Garlic Swirls</h3><p>Pepperoni finished with bold swirls of garlic sauce.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="Pepperoni with Garlic Swirls" data-price="9.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="9.jpg" alt="White Pizza Garlic Ricotta"></div><div class="offer-content"><h3>White Pizza (Garlic Ricotta)</h3><p>A sauceless white pizza with creamy garlic ricotta.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="White Pizza Garlic Ricotta" data-price="9.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="10.jpg" alt="Pepperoni and Basil"></div><div class="offer-content"><h3>Pepperoni &amp; Basil</h3><p>Pepperoni pizza finished with fresh basil leaves.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="Pepperoni and Basil" data-price="9.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="11.jpg" alt="Pepperoni and Pineapple Deluxe"></div><div class="offer-content"><h3>Pepperoni &amp; Pineapple Deluxe</h3><p>Pepperoni, pineapple chunks and extra cheese.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="Pepperoni and Pineapple Deluxe" data-price="9.99">Add to Basket</button></div></div></article>
+                    <article class="offer-card"><div class="offer-image"><img src="12.jpg" alt="Spinach and Mushroom pizza"></div><div class="offer-content"><h3>Spinach &amp; Mushroom</h3><p>Spinach leaves and mushrooms on a rich vegetable pizza.</p><div class="offer-meta"><span class="offer-price">£9.99</span><button class="order-btn" type="button" data-name="Spinach and Mushroom" data-price="9.99">Add to Basket</button></div></div></article>
                 </div>
+                </section>
             </section>
 
             <aside class="cart-summary">
+                <span class="status-pill">Basket saved</span>
                 <h3>Your Basket</h3>
                 <p id="basket-status">Your basket is empty.</p>
+                <div class="cart-items" id="basket-items">
+                    <div class="cart-item"><span class="cart-item-name">No items yet</span><span class="cart-item-price">£0.00</span></div>
+                </div>
                 <div class="cart-totals">
-                    <p><span>Subtotal</span> <strong class="subtotal-val">£0.00</strong></p>
-                    <p><span>Delivery</span> <span>£2.50</span></p>
+                    <p><span>Subtotal</span><strong class="subtotal-val">£0.00</strong></p>
+                    <p><span>Delivery</span><span>£2.50</span></p>
                     <hr>
-                    <p><span>Total</span> <strong class="total-val">£0.00</strong></p>
+                    <p><span>Total</span><strong class="total-val">£0.00</strong></p>
                 </div>
                 <button class="checkout-btn" type="button" disabled>Checkout</button>
             </aside>

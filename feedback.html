@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Feedback - Pizza Uno Sunderland</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="feedback-page">
     <header>
         <div class="header-inner">
             <div class="logo">
@@ -14,33 +14,47 @@
             </div>
             <div class="site-title">
                 <h1>PIZZA UNO SUNDERLAND</h1>
-                <p>Share your experience and help us keep improving.</p>
+                <p>Tell us what worked, what you loved, and what we should improve.</p>
             </div>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
             <nav id="site-nav">
                 <a href="index.html">Home</a>
                 <a href="order.html">Order Online</a>
                 <a href="feedback.html" class="active">Feedback</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.html">Contact</a>
                 <a href="login.html">Login</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="contact-container">
-            <section class="contact-info">
-                <h2>We Value Your Opinion</h2>
-                <p>At Pizza Uno, we work hard to serve food that feels worth coming back for. If you loved your meal or think we can improve, we want to hear from you.</p>
-                <hr>
-                <h3>Recent Reviews</h3>
+        <section class="page-hero">
+            <div class="hero-card">
+                <span class="eyebrow">Customer feedback</span>
+                <h2 class="page-title">We actually want to hear how your order went.</h2>
+                <p class="page-copy">The feedback page now separates customer comments from the form itself so it feels more organised and easier to use, especially on a phone.</p>
+            </div>
+            <div class="summary-card">
+                <h3 class="summary-title">Why leave feedback?</h3>
+                <ul class="summary-list">
+                    <li>Help us improve delivery and collection.</li>
+                    <li>Share what menu items you enjoyed most.</li>
+                    <li>Let future customers see what stands out.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact-layout feedback-layout-gap">
+            <article class="contact-card">
+                <h2>Recent Reviews</h2>
                 <blockquote>"Best pepperoni pizza in town. Fast delivery too." <strong>- Sarah J.</strong></blockquote>
                 <blockquote>"The Meal Deal is amazing value for money." <strong>- Mark T.</strong></blockquote>
-            </section>
+                <blockquote>"Collection was quick and the chicken strips were spot on." <strong>- Amina R.</strong></blockquote>
+            </article>
 
-            <section class="contact-form">
+            <article class="contact-card">
                 <h2>Leave a Review</h2>
-                <form action="#" method="post">
+                <form class="review-form" action="#" method="post">
                     <label for="review-name">Your Name</label>
                     <input type="text" id="review-name" name="customerName" placeholder="Your name" required>
 
@@ -48,7 +62,7 @@
                     <input type="email" id="review-email" name="customerEmail" placeholder="you@example.com" required>
 
                     <label for="rating">Rating</label>
-                    <select class="rating-select" name="rating" id="rating">
+                    <select name="rating" id="rating">
                         <option value="5">5 Stars - Excellent</option>
                         <option value="4">4 Stars - Very Good</option>
                         <option value="3">3 Stars - Average</option>
@@ -59,9 +73,9 @@
                     <label for="comments">Your Review</label>
                     <textarea id="comments" name="comments" placeholder="Tell us about your experience..." required></textarea>
 
-                    <button type="submit" class="order-btn">Submit Feedback</button>
+                    <button type="submit">Submit Feedback</button>
                 </form>
-            </section>
+            </article>
         </section>
     </main>
 
@@ -72,3 +86,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

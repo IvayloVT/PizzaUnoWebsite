@@ -6,7 +6,7 @@
     <title>Checkout - Pizza Uno Sunderland</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="checkout-page">
     <header>
         <div class="header-inner">
             <div class="logo">
@@ -14,28 +14,32 @@
             </div>
             <div class="site-title">
                 <h1>PIZZA UNO SUNDERLAND</h1>
-                <p>Review your basket and place your order.</p>
+                <p>Review your basket and place your order with a clearer summary.</p>
             </div>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
             <nav id="site-nav">
                 <a href="index.html">Home</a>
                 <a href="order.html" class="active">Order Online</a>
                 <a href="feedback.html">Feedback</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.html">Contact</a>
                 <a href="login.html">Login</a>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main class="checkout-shell">
         <section class="checkout-container">
-            <h2>Checkout</h2>
-            <p>Please review your order before placing it.</p>
+            <span class="eyebrow">Checkout</span>
+            <h2>Review your order</h2>
+            <p>Everything you added should appear below before you place your order.</p>
+            <div class="checkout-items" id="checkout-items">
+                <div class="checkout-item"><span>No items added yet</span><span>£0.00</span></div>
+            </div>
             <div class="checkout-summary">
-                <p><strong>Subtotal:</strong> <span id="checkout-subtotal">£0.00</span></p>
-                <p><strong>Delivery:</strong> £2.50</p>
+                <div class="checkout-summary-row"><strong>Subtotal</strong><span id="checkout-subtotal">£0.00</span></div>
+                <div class="checkout-summary-row"><strong>Delivery</strong><span>£2.50</span></div>
                 <hr>
-                <p><strong>Total:</strong> <span id="checkout-total">£0.00</span></p>
+                <div class="checkout-summary-row"><strong>Total</strong><span id="checkout-total">£0.00</span></div>
             </div>
             <button class="place-order" type="button">Place Order</button>
         </section>
