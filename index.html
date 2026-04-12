@@ -3,916 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="Professional portfolio of Ivaylo Tsvetkov featuring front-end work, cyber security awareness, case studies, and polished digital presentation.">
-    <meta name="theme-color" content="#07111f">
-    <meta name="color-scheme" content="dark">
-    <meta property="og:title" content="Home | Ivaylo Tsvetkov">
-    <meta property="og:description" content="Professional portfolio of Ivaylo Tsvetkov featuring front-end work, cyber security awareness, case studies, and polished digital presentation.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="ivaylo-main.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Home | Ivaylo Tsvetkov">
-    <meta name="twitter:description" content="Professional portfolio of Ivaylo Tsvetkov featuring front-end work, cyber security awareness, case studies, and polished digital presentation.">
-    <meta name="twitter:image" content="ivaylo-main.jpg">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="site-shell.css">
-    <title>Home | Ivaylo Tsvetkov</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #07111f;
-            --bg-soft: #0f1c31;
-            --panel: rgba(15, 28, 49, 0.78);
-            --panel-strong: rgba(9, 19, 35, 0.9);
-            --text: #eff6ff;
-            --muted: #a9bdd9;
-            --line: rgba(162, 188, 222, 0.18);
-            --accent: #7dd3fc;
-            --accent-strong: #38bdf8;
-            --glow: rgba(56, 189, 248, 0.2);
-            --shadow: 0 22px 70px rgba(3, 10, 25, 0.45);
-            --radius-lg: 28px;
-            --radius-md: 20px;
-            --radius-sm: 14px;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Manrope', sans-serif;
-            color: var(--text);
-            line-height: 1.6;
-            background:
-                radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), transparent 32%),
-                radial-gradient(circle at 85% 10%, rgba(45, 212, 191, 0.12), transparent 24%),
-                linear-gradient(180deg, #09111f 0%, #0b1526 40%, #050b14 100%);
-            top: 0 !important;
-            overflow-x: hidden;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        .container {
-            width: min(1180px, calc(100% - 40px));
-            margin: 0 auto;
-        }
-
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            line-height: normal;
-            backdrop-filter: blur(18px);
-            background: rgba(5, 11, 20, 0.72);
-            border-bottom: 1px solid var(--line);
-        }
-
-        .header-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 24px;
-            padding: 18px 0;
-        }
-
-        .logo {
-            text-decoration: none;
-            color: var(--text);
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a,
-        .lang-switch {
-            text-decoration: none;
-            color: var(--muted);
-            font-size: 0.92rem;
-            line-height: normal;
-            font-weight: 700;
-            padding: 10px 14px;
-            border-radius: 999px;
-            border: 1px solid transparent;
-            background: transparent;
-            transition: 0.25s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active,
-        .lang-switch:hover {
-            color: var(--text);
-            border-color: var(--line);
-            background: rgba(125, 211, 252, 0.08);
-        }
-
-        .lang-switch {
-            cursor: pointer;
-            font-family: inherit;
-        }
-
-        #google_translate_element, .goog-te-banner-frame, .skiptranslate { display: none !important; }
-
-        .hero {
-            padding: 36px 0 42px;
-        }
-
-        .hero-shell {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 34px;
-            align-items: stretch;
-        }
-
-        .hero-copy,
-        .hero-visual {
-            background: var(--panel);
-            border: 1px solid var(--line);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-copy {
-            padding: 54px 52px;
-        }
-
-        .hero-copy::before,
-        .hero-visual::before,
-        .section-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(125, 211, 252, 0.12), transparent 40%, transparent 100%);
-            pointer-events: none;
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 18px;
-            padding: 8px 14px;
-            border-radius: 999px;
-            background: rgba(125, 211, 252, 0.1);
-            border: 1px solid rgba(125, 211, 252, 0.18);
-            color: #d7f1ff;
-            font-size: 0.82rem;
-            font-weight: 800;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .hero h1,
-        .section-heading h2,
-        .feature-title,
-        .card h3 {
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .hero h1 {
-            margin: 0;
-            font-size: clamp(3.05rem, 4.8vw, 5.15rem);
-            line-height: 0.94;
-            letter-spacing: -0.03em;
-            max-width: 10.5ch;
-        }
-
-        .hero-lead {
-            max-width: 54ch;
-            margin: 24px 0 30px;
-            color: var(--muted);
-            font-size: 1.04rem;
-            line-height: 1.78;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-            margin-bottom: 34px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 14px 22px;
-            border-radius: 999px;
-            text-decoration: none;
-            font-weight: 800;
-            transition: 0.25s ease;
-            border: 1px solid var(--line);
-        }
-
-        .btn-primary {
-            color: #05111c;
-            background: linear-gradient(135deg, #c5f0ff, #61d3ff);
-            box-shadow: 0 18px 32px var(--glow);
-        }
-
-        .btn-secondary {
-            color: var(--text);
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 14px;
-        }
-
-        .stat {
-            padding: 18px;
-            border-radius: var(--radius-sm);
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--line);
-        }
-
-        .stat strong {
-            display: block;
-            font-size: 1.22rem;
-            margin-bottom: 8px;
-        }
-
-        .stat span {
-            color: var(--muted);
-            font-size: 0.9rem;
-            line-height: 1.65;
-        }
-
-        .hero-visual {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
-
-        .hero-image {
-            width: 100%;
-            min-height: 460px;
-            object-fit: cover;
-            border-radius: 24px;
-            display: block;
-        }
-
-        .feature-strip {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 14px;
-        }
-
-        .feature-strip .mini-panel strong {
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .mini-panel {
-            padding: 18px;
-            border-radius: var(--radius-md);
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--line);
-        }
-
-        .mini-panel p,
-        .section-heading p,
-        .card p {
-            color: var(--muted);
-            line-height: 1.72;
-        }
-
-        .section-card {
-            margin-top: 38px;
-            padding: 34px;
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--line);
-            background: var(--panel-strong);
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .section-heading {
-            display: flex;
-            justify-content: space-between;
-            gap: 24px;
-            align-items: end;
-            margin-bottom: 28px;
-        }
-
-        .section-heading h2 {
-            margin: 0;
-            font-size: clamp(2.1rem, 3vw, 3rem);
-            line-height: 0.98;
-        }
-
-        .section-heading p {
-            margin: 0;
-            max-width: 52ch;
-            line-height: 1.72;
-        }
-
-        .featured-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 22px;
-        }
-
-        .featured-case {
-            display: grid;
-            grid-template-columns: 1.08fr 0.92fr;
-            gap: 22px;
-            align-items: stretch;
-        }
-
-        .featured-case-card,
-        .featured-case-copy,
-        .proof-band {
-            padding: 24px;
-            border-radius: 22px;
-            border: 1px solid var(--line);
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        .featured-case-card img {
-            width: 100%;
-            height: 100%;
-            min-height: 320px;
-            object-fit: cover;
-            display: block;
-            border-radius: 18px;
-        }
-
-        .proof-band {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-top: 22px;
-        }
-
-        .proof-band strong {
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .card {
-            text-decoration: none;
-            padding: 20px;
-            border-radius: 22px;
-            border: 1px solid var(--line);
-            background: rgba(255, 255, 255, 0.03);
-            transition: 0.25s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(125, 211, 252, 0.32);
-            box-shadow: 0 20px 44px rgba(0, 0, 0, 0.24);
-        }
-
-        .image-wrapper {
-            width: 100%;
-            height: 230px;
-            border-radius: 18px;
-            overflow: hidden;
-            margin-bottom: 18px;
-        }
-
-        .image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .tag {
-            display: inline-flex;
-            align-items: center;
-            padding: 6px 12px;
-            border-radius: 999px;
-            font-size: 0.78rem;
-            font-weight: 800;
-            letter-spacing: 0.03em;
-            margin-bottom: 10px;
-            background: rgba(125, 211, 252, 0.12);
-            color: #d7f1ff;
-            border: 1px solid rgba(125, 211, 252, 0.16);
-        }
-
-        .card h3 {
-            margin: 0 0 8px;
-            font-size: 1.88rem;
-            line-height: 0.98;
-        }
-
-        .signature-band {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 20px;
-            align-items: stretch;
-        }
-
-        .feature-title {
-            margin: 0 0 12px;
-            font-size: 2.05rem;
-            line-height: 0.98;
-        }
-
-        .bullet-list {
-            display: grid;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .bullet {
-            padding: 14px 16px;
-            border-radius: 16px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--line);
-        }
-
-        .bullet strong {
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        @media (max-width: 920px) {
-            .hero-shell,
-            .signature-band,
-            .featured-case {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-copy {
-                padding: 34px 26px;
-            }
-
-            .hero h1 {
-                max-width: none;
-            }
-
-            .hero-image {
-                min-height: 360px;
-            }
-
-            .hero-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .proof-band {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-flex,
-            .section-heading {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .site-header {
-                position: relative;
-                backdrop-filter: none;
-                background: rgba(5, 11, 20, 0.94);
-            }
-
-            .container {
-                width: min(100% - 24px, 1180px);
-            }
-
-            .logo {
-                font-size: 1.55rem;
-            }
-
-            nav {
-                width: 100%;
-            }
-
-            .nav-links {
-                width: 100%;
-                gap: 8px;
-            }
-
-            .nav-links li {
-                width: calc(50% - 4px);
-            }
-
-            .nav-links li:last-child {
-                width: 100%;
-            }
-
-            .nav-links a {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-
-            .lang-switch {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .hero {
-                padding: 28px 0 24px;
-            }
-
-            .hero-copy,
-            .hero-visual,
-            .section-card {
-                padding: 24px 20px;
-            }
-
-            .hero h1 {
-                font-size: clamp(2.45rem, 12vw, 3.7rem);
-                line-height: 0.98;
-            }
-
-            .hero-lead {
-                font-size: 0.98rem;
-                margin: 18px 0 24px;
-            }
-
-            .hero-btns {
-                margin-bottom: 24px;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .hero-visual {
-                padding: 18px;
-            }
-
-            .hero-image {
-                min-height: 0;
-                aspect-ratio: 4 / 5;
-                border-radius: 20px;
-            }
-
-            .featured-case-card img,
-            .image-wrapper {
-                min-height: 0;
-                height: auto;
-                aspect-ratio: 4 / 3;
-            }
-
-            .feature-strip {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        header.site-header {
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            line-height: normal;
-            backdrop-filter: blur(18px);
-            background: rgba(5, 11, 20, 0.72);
-            border-bottom: 1px solid var(--line);
-        }
-
-        header.site-header .header-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 24px;
-            padding: 18px 0;
-        }
-
-        header.site-header .logo {
-            text-decoration: none;
-            color: var(--text);
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            line-height: normal;
-        }
-
-        header.site-header nav {
-            width: auto;
-        }
-
-        header.site-header .nav-links {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-        }
-
-        header.site-header .nav-links a,
-        header.site-header .lang-switch {
-            text-decoration: none;
-            color: var(--muted);
-            font-size: 0.92rem;
-            font-weight: 700;
-            line-height: normal;
-            padding: 10px 14px;
-            border-radius: 999px;
-            border: 1px solid transparent;
-            background: transparent;
-            transition: 0.25s ease;
-        }
-
-        header.site-header .nav-links a:hover,
-        header.site-header .nav-links a.active,
-        header.site-header .lang-switch:hover {
-            color: var(--text);
-            border-color: var(--line);
-            background: rgba(125, 211, 252, 0.08);
-        }
-
-        header.site-header .lang-switch {
-            cursor: pointer;
-            font-family: inherit;
-        }
-
-        @media (max-width: 768px) {
-            header.site-header {
-                position: relative;
-                backdrop-filter: none;
-                background: rgba(5, 11, 20, 0.94);
-            }
-
-            header.site-header .header-flex {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            header.site-header nav {
-                width: 100%;
-            }
-
-            header.site-header .logo {
-                font-size: 1.55rem;
-            }
-
-            header.site-header .nav-links {
-                width: 100%;
-                gap: 8px;
-            }
-
-            header.site-header .nav-links li {
-                width: calc(50% - 4px);
-            }
-
-            header.site-header .nav-links li:last-child {
-                width: 100%;
-            }
-
-            header.site-header .nav-links a {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-
-            header.site-header .lang-switch {
-                width: 100%;
-            }
-        }
-    </style>
+    <title>Pizza Uno Sunderland</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="site-header">
-        <div class="container header-flex">
-            <a href="index.html" class="logo">IVAYLO TSVETKOV</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><button class="lang-switch" onclick="toggleLanguage()"><span id="lang-text">BG</span></button></li>
-                </ul>
+<body class="home-page">
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <img src="Logo.png" alt="Pizza Uno logo">
+            </div>
+            <div class="site-title">
+                <h1>PIZZA UNO SUNDERLAND</h1>
+                <p>Fresh pizza, loaded sides and easy takeaway nights in Sunderland.</p>
+            </div>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+            <nav id="site-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="order.html">Order Online</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
             </nav>
         </div>
     </header>
 
-    <div id="google_translate_element"></div>
-
-    <section class="hero">
-        <div class="container hero-shell">
-            <div class="hero-copy">
-                <span class="eyebrow">Front-End Developer | Cyber Security | Project Delivery</span>
-                <h1>Front-end work with stronger presentation, clearer thinking, and technical awareness built in.</h1>
-                <p class="hero-lead">I use this portfolio to show how I approach digital work professionally: cleaner interfaces, stronger structure, and more thoughtful delivery. The goal is not just to show projects, but to show how I could contribute to real teams, products, and user-facing experiences.</p>
-
-                <div class="hero-btns">
-                    <a href="portfolio.html" class="btn btn-primary">Explore Portfolio</a>
-                    <a href="contact.html" class="btn btn-secondary">Start a Conversation</a>
+    <main>
+        <section class="hero">
+            <div class="hero-card">
+                <span class="eyebrow">Fresh from the oven</span>
+                <h2 class="hero-heading">Takeaway that feels like a proper treat.</h2>
+                <p class="hero-copy">Pizza Uno brings together wood-fired flavour, comfort-food classics and quick local service. Whether you're planning a family night, a lazy weekend order or a quick collection, the whole site now revolves around getting you there faster.</p>
+                <div class="hero-actions">
+                    <a class="button-link" href="order.html">Start Your Order</a>
+                    <a class="secondary-link" href="contact.html">Visit or Call Us</a>
                 </div>
-
-                <div class="hero-stats">
-                    <div class="stat">
-                        <strong>Available for</strong>
-                        <span>Junior front-end, web support, and technically minded digital roles.</span>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-value">7 days</span>
+                        <span class="stat-label">Open late every day</span>
                     </div>
-                    <div class="stat">
-                        <strong>What I Improve</strong>
-                        <span>Interface clarity, content structure, and the quality of the user journey.</span>
+                    <div class="stat-card">
+                        <span class="stat-value">Fast</span>
+                        <span class="stat-label">Easy checkout and collection</span>
                     </div>
-                    <div class="stat">
-                        <strong>How I Deliver</strong>
-                        <span>Professional presentation backed by practical technical decisions and calm execution.</span>
+                    <div class="stat-card">
+                        <span class="stat-value">Fresh</span>
+                        <span class="stat-label">Pizza, sides and meal deals</span>
                     </div>
                 </div>
             </div>
+            <div class="hero-media media-fit">
+                <img src="Uno.jpg" alt="Pizza Uno restaurant interior">
+            </div>
+        </section>
 
-            <div class="hero-visual">
-                <img src="ivaylo-main.jpg" alt="Ivaylo Tsvetkov portrait" class="hero-image">
-                <div class="feature-strip">
-                    <div class="mini-panel">
-                        <strong>Designed to feel hireable</strong>
-                        <p>I care about work that reads clearly, looks considered, and feels ready to present in a professional setting.</p>
+        <section class="section-heading">
+            <h2>Why People Come Back</h2>
+            <p>We reorganised the site around the things customers care about most: quick offers, clear ordering and a better mobile experience.</p>
+        </section>
+
+        <section class="highlights-grid">
+            <article class="feature-card">
+                <h3 class="feature-title">Easy Online Ordering</h3>
+                <p>Browse deals, sides, burgers and pizzas in one cleaner menu layout without hunting through cluttered sections.</p>
+            </article>
+            <article class="feature-card">
+                <h3 class="feature-title">Designed for Mobile</h3>
+                <p>The full site now scales much better on smaller screens, from navigation to cards, forms and checkout.</p>
+            </article>
+            <article class="feature-card">
+                <h3 class="feature-title">Basket That Follows Through</h3>
+                <p>Add items on the homepage or menu page and carry them through to checkout with a clearer summary.</p>
+            </article>
+        </section>
+
+        <section class="section-heading" id="offers">
+            <h2>Popular Deals</h2>
+            <p>Quick picks for family nights, value meals and collection specials.</p>
+        </section>
+
+        <section class="menu-grid">
+            <div class="offers">
+                <article class="offer-card">
+                    <div class="offer-image"><img src="Deal1.jpeg" alt="Family Feast deal"></div>
+                    <div class="offer-content">
+                        <h3>Family Feast</h3>
+                        <p>2 large pizzas, garlic bread and a 1.5L Coke for an easy family order.</p>
+                        <div class="offer-meta">
+                            <span class="offer-price">£29.99</span>
+                            <button class="order-btn" type="button" data-name="Family Feast" data-price="29.99">Add to Basket</button>
+                        </div>
                     </div>
-                    <div class="mini-panel">
-                        <strong>Built with technical awareness</strong>
-                        <p>My decisions are shaped by usability, maintainability, and a stronger sense of how digital systems behave underneath the UI.</p>
+                </article>
+                <article class="offer-card">
+                    <div class="offer-image"><img src="Deal2.jpeg" alt="Meal Deal"></div>
+                    <div class="offer-content">
+                        <h3>Meal Deal</h3>
+                        <p>1 large pizza, large fries and a can of Coke for a classic takeaway combo.</p>
+                        <div class="offer-meta">
+                            <span class="offer-price">£19.99</span>
+                            <button class="order-btn" type="button" data-name="Meal Deal" data-price="19.99">Add to Basket</button>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container section-card">
-            <div class="section-heading">
-                <div>
-                    <span class="eyebrow">Featured Case Study</span>
-                    <h2>One project sequence that shows diagnosis, planning, and delivery together.</h2>
-                </div>
-                <p>The strongest portfolio stories show more than one finished screen. They show how a problem was understood, how the response was structured, and what changed in the final build.</p>
-            </div>
-
-            <div class="featured-case">
-                <a href="p4.html" class="featured-case-card">
-                    <img src="p4-11.jpg" alt="Pizza Uno featured project">
-                </a>
-                <div class="featured-case-copy">
-                    <span class="tag">Featured Work</span>
-                    <h3 class="feature-title">Pizza Uno from audit to rebuild.</h3>
-                    <p>This sequence is one of the clearest examples of how I work. First I reviewed the original site, identified the friction, and framed what needed to improve. Then I rebuilt the experience with a stronger focus on clarity, ordering flow, and customer confidence.</p>
-                    <div class="hero-btns">
-                        <a href="p4.html" class="btn btn-primary">View Case Study</a>
-                        <a href="portfolio.html" class="btn btn-secondary">See All Projects</a>
+                </article>
+                <article class="offer-card">
+                    <div class="offer-image"><img src="Deal3.jpg" alt="Any large pizza offer"></div>
+                    <div class="offer-content">
+                        <h3>Any Large Pizza</h3>
+                        <p>A simple collection-ready special when you want something quick and reliable.</p>
+                        <div class="offer-meta">
+                            <span class="offer-price">£9.99</span>
+                            <button class="order-btn" type="button" data-name="Any Large Pizza" data-price="9.99">Add to Basket</button>
+                        </div>
                     </div>
-                </div>
+                </article>
             </div>
 
-            <div class="proof-band">
-                <div class="bullet">
-                    <strong>Audit before action</strong>
-                    Review and diagnosis shaped the implementation instead of redesign decisions being based on guesswork.
+            <aside class="cart-summary">
+                <span class="status-pill">Live basket</span>
+                <h3>Your Basket</h3>
+                <p id="basket-status">Your basket is empty.</p>
+                <div class="cart-items" id="basket-items">
+                    <div class="cart-item"><span class="cart-item-name">No items yet</span><span class="cart-item-price">£0.00</span></div>
                 </div>
-                <div class="bullet">
-                    <strong>User journey focus</strong>
-                    The rebuild prioritised friction reduction, communication clarity, and customer flow over decoration.
+                <div class="cart-totals">
+                    <p><span>Subtotal</span><strong class="subtotal-val">£0.00</strong></p>
+                    <p><span>Delivery</span><span>£2.50</span></p>
+                    <hr>
+                    <p><span>Total</span><strong class="total-val">£0.00</strong></p>
                 </div>
-                <div class="bullet">
-                    <strong>Stronger portfolio proof</strong>
-                    Together, the two Pizza Uno projects show analysis, implementation, and more complete front-end thinking.
-                </div>
-            </div>
-        </div>
+                <button class="checkout-btn" type="button" disabled>Checkout</button>
+            </aside>
+        </section>
 
-        <div class="container section-card">
-            <div class="section-heading">
-                <div>
-                    <span class="eyebrow">What I Bring</span>
-                    <h2>A profile shaped by design clarity, technical reasoning, and reliable delivery.</h2>
-                </div>
-                <p>I want the work here to read like professional capability, not a list of disconnected university tasks. These are the three strengths that connect the portfolio together.</p>
-            </div>
+        <section class="section-heading">
+            <h2>More Than Just Pizza</h2>
+            <p>Build a full order with sides, wings, burgers and wraps, or keep it simple with one of our ready-made specials.</p>
+        </section>
 
-            <div class="featured-grid">
-                <a href="p1.html" class="card">
-                    <div class="image-wrapper"><img src="pm.jpg" alt="Project Management"></div>
-                    <span class="tag">Project Management</span>
-                    <h3>Delivery Thinking</h3>
-                    <p>Planning, structure, and resource awareness that help technical work move from idea to execution with less friction.</p>
-                </a>
+        <section class="info-grid">
+            <article class="info-card">
+                <h3 class="panel-title">Fresh Sides</h3>
+                <p>Garlic bread, chips, wings and chicken strips all sit alongside the pizza menu for easier ordering.</p>
+            </article>
+            <article class="info-card">
+                <h3 class="panel-title">Fast Collection</h3>
+                <p>Ideal for busy evenings when you want something dependable without overcomplicating the order.</p>
+            </article>
+            <article class="info-card">
+                <h3 class="panel-title">Local Favourite</h3>
+                <p>Simple, warm and easy to use, with contact details, feedback and account pages that feel part of one site.</p>
+            </article>
+        </section>
+    </main>
 
-                <a href="p2.html" class="card">
-                    <div class="image-wrapper"><img src="ns.jpg" alt="Network and Security"></div>
-                    <span class="tag">Cyber Security</span>
-                    <h3>Security Thinking</h3>
-                    <p>Traffic analysis, network visibility, and a practical understanding of how systems behave under real technical conditions.</p>
-                </a>
+    <footer>
+        <p>&copy; 2026 Pizza Uno Sunderland | <a href="policy.html">Terms &amp; Cookie Policy</a></p>
+    </footer>
 
-                <a href="p3.html" class="card">
-                    <div class="image-wrapper"><img src="sw.jpg" alt="Web Technologies"></div>
-                    <span class="tag">Web Technology</span>
-                    <h3>Product Experience</h3>
-                    <p>Front-end work focused on cleaner interfaces, better communication, and more confident user journeys.</p>
-                </a>
-            </div>
-        </div>
+    <div id="cookie-banner" class="cookie-container">
+        <p>We use cookies to improve your experience and remember your basket. By selecting "Accept", you agree to our <a href="policy.html">Terms &amp; Cookies</a>.</p>
+        <button id="accept-cookies" type="button">Accept</button>
+    </div>
 
-        <div class="container section-card">
-            <div class="signature-band">
-                <div>
-                    <span class="eyebrow">Why Work With Me</span>
-                    <h2 class="feature-title">I care about making digital work feel clearer, more credible, and better presented.</h2>
-                    <p>The premium feel of the site matters, but the more important point is what it signals. I pay attention to how work is framed, how information is structured, and how a product feels in use. That is the layer I would bring into real projects as well.</p>
-                </div>
-                <div class="bullet-list">
-                    <div class="bullet">
-                        <strong>Presentation with purpose</strong>
-                        I want the visual layer to support trust, clarity, and a stronger first impression.
-                    </div>
-                    <div class="bullet">
-                        <strong>Thinking before polish</strong>
-                        I value diagnosis, structure, and practical reasoning before moving into final execution.
-                    </div>
-                    <div class="bullet">
-                        <strong>Joined-up skill set</strong>
-                        Front-end, security, and delivery thinking support one another instead of sitting in separate silos.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,bg',
-                autoDisplay: false
-            }, 'google_translate_element');
-            setTimeout(applySavedLanguage, 1000);
-        }
-
-        function toggleLanguage() {
-            const currentLang = localStorage.getItem('preferredLang') || 'en';
-            const newLang = currentLang === 'en' ? 'bg' : 'en';
-            changeLanguage(newLang);
-        }
-
-        function changeLanguage(langCode) {
-            const select = document.querySelector('.goog-te-combo');
-            if (select) {
-                select.value = langCode;
-                select.dispatchEvent(new Event('change'));
-                localStorage.setItem('preferredLang', langCode);
-                updateButtonText(langCode);
-            }
-        }
-
-        function applySavedLanguage() {
-            const savedLang = localStorage.getItem('preferredLang');
-            if (savedLang && savedLang !== 'en') {
-                changeLanguage(savedLang);
-            } else {
-                updateButtonText('en');
-            }
-        }
-
-        function updateButtonText(lang) {
-            const btn = document.getElementById('lang-text');
-            if (btn) {
-                btn.innerText = lang === 'en' ? 'BG' : 'EN';
-            }
-        }
-    </script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="site-enhancements.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
 
