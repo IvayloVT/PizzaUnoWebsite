@@ -159,7 +159,23 @@ function setupNav() {
     });
 }
 
+function setupHeaderScroll() {
+    const header = document.querySelector("header");
+
+    if (!header) {
+        return;
+    }
+
+    const toggleHeader = () => {
+        header.classList.toggle("header-hidden", window.scrollY > 10);
+    };
+
+    toggleHeader();
+    window.addEventListener("scroll", toggleHeader, { passive: true });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+    setupHeaderScroll();
     setupNav();
     setupOrderButtons();
     setupCheckoutLink();
